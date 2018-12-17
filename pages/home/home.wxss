@@ -1,0 +1,21 @@
+/* pages/home/home.wxss */
+.class_input {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 50px;
+} 
+.class_btn_search{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.venues_box {
+    padding: 0 10rpx;
+}
+
+.venues_item {
+    float: left;
+    width: 49%;
+    margin: 0 0.5%;
+}
+

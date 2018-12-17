@@ -1,0 +1,15 @@
+<input placeholder='请输入表情相关词汇' type='text' confirm-type='search' class='class_input'                    name='searchtext' bindinput ="inputKeyWord">
+</input>
+<button class='class_btn_search' bindtap='searchDoutu'>搜索</button>
+
+<view class="venues_box">
+    <view class="venues_list">
+        <block wx:for="{{imgData}}"wx:key="*this" wx:for-index="index" wx:for-item="item">
+             <image class="venues_item" bindtap='onImgClick' data-img="{{item}}"  src="{{item}}"/>
+        </block>
+    </view>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+      加载中...
+</loading>

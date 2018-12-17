@@ -1,0 +1,6 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:fogs="{{log}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}</text>
+  </block>
+</view>

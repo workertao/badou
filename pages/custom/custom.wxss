@@ -1,0 +1,38 @@
+/* pages/custom/custom.wxss */
+.custom_root{
+  display: block;
+  flex-direction: column;
+}
+.custom_top{
+ display: flex;
+ flex-wrap: nowrap;
+ height: 50px;
+ background-color: #ff4400;
+ flex-direction: row;
+}
+.custom_center_root{
+  display: flex;
+  background-color: #e8e;
+  flex-wrap: wrap;
+}
+.custom_left{
+ display: flex;
+ width:20%;
+ background-color: #cccccc;
+ flex-wrap: nowrap;
+ flex-direction: column;
+}
+.custom_right{
+  display: flex;
+  background-color: #ff1582;
+  width: 80%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.custom_right_img_item{
+  background-color: #e56;
+  height: 100px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 49%;
+}

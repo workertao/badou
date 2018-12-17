@@ -1,0 +1,25 @@
+<!--pages/custom/custom.wxml-->
+<view class='custom_root'>
+  <view class='custom_top'>
+    <block wx:for="{{topDataArr}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+        <text bindtap='onTopClick'  data-topValue="{{item}}">{{item}}</text>
+      </block>
+  </view>
+  <view class='custom_center_root'>
+    <view class='custom_left'>
+     <block wx:for="{{leftDataArr}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+        <text>{{item.cate2}}</text>
+      </block>
+    </view>
+    <view class='custom_right'>
+      <block wx:for="{{centerDataArr}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+        <!-- <image class='custom_right_img_item' src='{{item.path}}'>{{item.width}}</image> -->
+        <text>{{item.height}}</text>
+      </block>
+    </view>
+  </view>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+      加载中...
+</loading>
