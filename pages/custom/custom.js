@@ -123,7 +123,7 @@ Page({
         //获取json中的xml
         console.log("成功：" + JSON.stringify(res.data));
         var jsonData = JSON.stringify(res.data);
-        var newJsonData = jsonData.replace('//static', 'https://www');
+        var newJsonData = jsonData.re('//static', 'https://www');
         console.log("替换字符串" + newJsonData);
         var jsonObject = JSON.parse(newJsonData)
         console.log("转换object" + jsonObject);

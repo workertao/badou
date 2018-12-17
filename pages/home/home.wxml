@@ -1,5 +1,6 @@
 <input placeholder='请输入表情相关词汇' type='text' confirm-type='search' class='class_input'                    name='searchtext' bindinput ="inputKeyWord">
 </input>
+<cover-image src='https://static.doutula.com/material/v10/脸部/真人脸/a70.png'>测试</cover-image>
 <button class='class_btn_search' bindtap='searchDoutu'>搜索</button>
 
 <view class="venues_box">

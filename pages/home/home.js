@@ -133,6 +133,7 @@ Page({
    */
   onLoad: function (options) {
     console.log("onload");
+    this.onTest();
   },
 
   /**
@@ -201,5 +202,40 @@ Page({
         })
       }
     }
+  },
+
+  onTest:function(){
+    wx.downloadFile({
+      url: 'https://www.doutula.com/material/v10/脸部/真人脸/a70.png',
+      success(res) {
+        console.log("数据："+res.statusCode)
+        // 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
+        if (res.statusCode === 200) {
+          wx.playVoice({
+            filePath: res.tempFilePath
+          })
+        }
+      }
+    })
+
+
+  //   wx.request({
+  //     url: 'https://static.doutula.com/material/v10/脸部/真人脸/a70.png',
+  //     method: 'GET',
+  //     header: {
+  //       'content-type': 'application/octet-stream',
+  //       'User-Agent':'https'
+  //     },
+  //     success: function (res) {
+  //       var data = res.data
+  //       console.log("图片："+JSON.stringify(res.data))
+  //       console.log(res.statusCode)
+  //       if (res.statusCode == 200) {
+  //         that.setData({
+  //           captchaImage: 'data:image/png;base64,' + data,  // data 为接口返回的base64字符串
+  //         })
+  //       }
+  //     }
+  //   })
   }
 })
